@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Linea del Tiempo</title>
+  <style>
+    h1 {
+      color: white;
+    }
+
+    h4 {
+      color: white;
+    }
+
+    h6 {
+      color: white;
+    }
+  </style>
+  <!-- Required meta tags -->
+  <h1 style="text-align:center;">Línea de Tiempo de Tecnologías Web</h1>
+  <h4 style="text-align:center;">Hecho por Jasser Ramos</h4>
+  <h6 style="text-align:center;">Haga un clic en las imagenes si desea mas informacion.</h6>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #474e5d;
+      font-family: Helvetica, sans-serif;
+    }
+
+    /* The actual timeline (the vertical ruler) */
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: white;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    /* Container around content */
+    .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    /* The circles on the timeline */
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: white;
+      border: 4px solid #FF9F55;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    /* Place the container to the left */
+    .left {
+      left: 0;
+    }
+
+    /* Place the container to the right */
+    .right {
+      left: 50%;
+    }
+
+    /* Add arrows to the left container (pointing right) */
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent white;
+    }
+
+    /* Add arrows to the right container (pointing left) */
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+    /* Fix the circle for containers on the right side */
+    .right::after {
+      left: -16px;
+    }
+
+    /* The actual content */
+    .content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+    }
+
+    /* Media queries - Responsive timeline on screens less than 600px wide */
+    @media screen and (max-width: 600px) {
+
+      /* Place the timelime to the left */
+      .timeline::after {
+        left: 31px;
+      }
+
+      /* Full-width containers */
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      /* Make sure that all arrows are pointing leftwards */
+      .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+
+      /* Make sure all circles are at the same spot */
+      .left::after,
+      .right::after {
+        left: 15px;
+      }
+
+      /* Make all right containers behave like the left ones */
+      .right {
+        left: 0%;
+      }
+    }
+  </style>
+  <!-- Bootstrap CSS -->
+</head>
+
+<body>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank"
+          onclick="alert ('You are going to HTML info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562231/20151129_565a7d08e8efa.png"
+            height="200" width="300">
+        </a>
+        <h2>JUL 24, 1989 <br> CREACION DEL LENGUAJE HTML</h2>
+        <p>En 1989, Tim Berners-Lee y Anders Berglund, dos investigadores del Laboratorio Europea de Física de
+          Partículas, crearón un lenguaje basado en etiquetas e hipertexto para marcar documentos técnicos con el fin de
+          compartirlos en Internet.
+        </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/WorldWideWeb" target="_blank"
+          onclick="alert ('You are going to NEXUS info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562253/TheProject.jpg" height="200"
+            width="300">
+        </a>
+        <h2>NOV 16, 1991 <br> NACE EL PRIMER NAVEGADOR WEB "NEXUS 0.1"</h2>
+        <p>Nace el primer navegador web, llamado WorldWideWeb y más tarde rebautizado Nexus, era un navegador de Web
+          editor. Podía ser utilizado para crear páginas, así como navegar por ellas.
+        </p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/Mosaic_(web_browser)" target="_blank"
+          onclick="alert ('You are going to MOSAIC info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562289/Mosaiclogo.jpg" height="200"
+            width="300">
+        </a>
+        <h2>APR 22, 1993 <br> ES CREADO EL NAVEGADOR "MOSAIC"</h2>
+        <p>Fue el primer navegador web gráfico disponible para visualizar páginas web en el sistema operativo Microsoft
+          Windows.
+        </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank"
+          onclick="alert ('You are going to HTML2 info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562316/descarga.jpeg" height="200"
+            width="300">
+        </a>
+        <h2>JUN 8, 1994 <br> LANZAMIENTO DE HTML2.</h2>
+        <p>Editado por Tim Berners Lee y Dan Conolly, es la primera versión oficial del lenguaje informático HTML, y
+          supone una formalización de las anteriores versiones de HTML
+        </p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank"
+          onclick="alert ('You are going to HTML info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562369/html-3-logo_318-54689.jpg"
+            height="200" width="300">
+        </a>
+        <h2>MAR 9, 1995 <br> ES LANZADO HTML 3.0</h2>
+        <p>Tras diferentes conversaciones entre Tim Berners-Lee y el MIT, el 1 de octubre de 1994 es creado el
+          consorcio
+          W3. Más conocido como W3C (World Wide Web Consortium) con la idea de definir estándares para Internet.
+          Dentro de la W3C se empieza a trabajar en noviembre 1995 sobre el borrador de HTML 3.0, el cual nunca
+          llegará
+          a ser recomendación y se quedará en borrador.
+          Es HTML 3.2 la versión que pasa a ser la recomendación.
+        </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/Adobe_Flash" target="_blank"
+          onclick="alert ('You are going to FLASH info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562394/descarga_%281%29.jpeg"
+            height="200" width="300">
+        </a>
+        <h2>NOV 12, 1996<br>LANZAMIENTO DE FLASH 1.0</h2>
+        <p>Un multimedia de la plataforma de software utilizado para la reproducción de animaciones, juegos de
+          navegador, aplicaciones de Internet, aplicaciones de escritorio, aplicaciones móviles y juegos para móviles .
+        </p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank"
+          onclick="alert ('You are going to CSS 1 info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562344/css-icon.png" height="200"
+            width="300">
+        </a>
+        <h2>DEC 17, 1996<br>LANZAMIENTO DE LA PRIMER TECNOLOGIA CSS "CSS 1"</h2>
+        <p>Hojas de estilo en cascada (Cascading Stylesheets) un lenguaje de diseño gráfico para definir y crear la
+          presentación de un documento estructurado escrito en un lenguaje de marcado.
+        </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/Adobe_Flash" target="_blank"
+          onclick="alert ('You are going to FLASH info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562408/macromedia-flash-2.png"
+            height="200" width="300">
+        </a>
+        <h2>FEB 12, 1997<br>LANZAMIENTO DE FLASH EN SU SEGUNDA VERSION</h2>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <a href="https://dotnet.microsoft.com/apps/aspnet" target="_blank"
+          onclick="alert ('You are going to ASP info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562655/icon-aspnet.png"
+            height="200" width="300">
+        </a>
+        <h2>DEC 26, 1997<br>LANZAMIENTO DE ASP</h2>
+        <p>Microsoft introdujo la tecnología llamada Active Server Pages en diciembre de 1997.
+        </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank"
+          onclick="alert ('You are going to HTML4 info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562434/descarga_%283%29.jpeg"
+            height="200" width="300">
+        </a>
+        <h2>FEB 21, 1998<br>LANZAMIENTO DE HTML4</h2>
+        <p>El lenguaje HTML 4.0 es una especificación del lenguaje html aprobada por el World Wide Web Consortium.
+        </p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank"
+          onclick="alert ('You are going to CSS2 info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562441/tools-css2-logo.png"
+            height="200" width="300">
+        </a>
+        <h2>MAY 30, 1998<br>LANZAMIENTO DE CSS2</h2>
+        <p>La especificación CSS2 fue desarrollada por la W3C y publicada como recomendación en mayo de 1998, y
+          abandonada en abril de 2008.
+        </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <a href="https://www.php.net" target="_blank" onclick="alert ('You are going to PHP3 info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562463/zlNTO.png" height="200"
+            width="300">
+        </a>
+        <h2>JUN 16, 1998<br>LANZAMIENTO DE PHP3</h2>
+        <p>Se creo la base del PHP3, y cambiaron el nombre del lenguaje por PHP: Hypertext Preprocessor. y se publicó
+          oficialmente en junio de 1998.
+        </p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/Adobe_Flash" target="_blank"
+          onclick="alert ('You are going to FLASH3 info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562452/3.png" height="200"
+            width="300">
+        </a>
+        <h2>AUG 12, 1998<br>LANZAMIENTO DE FLASH3</h2>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <a href="https://www.php.net" target="_blank" onclick="alert ('You are going to PHP5 info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562579/img_xlogo_php5.png"
+            height="200" width="300">
+        </a>
+        <h2>JUL 13, 2004<br>LANZAMIENTO DE PHP 5</h2>
+        <p>El 13 de julio del 2004, se lanzó PHP 5, utilizando el motor Zend Engine 2.0
+        </p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <a href="https://www.djangoproject.com" target="_blank" onclick="alert ('You are going to DJANGO info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562612/django_badge.sh.png"
+            height="200" width="300">
+        </a>
+        <h2>JUL 30, 2005<br>LANZAMIENTO DE DJANGO</h2>
+        <p>Un framework de desarrollo web de código abierto, escrito en Python, que respeta el patrón de diseño
+          conocido como Modelo–vista–controlador.
+        </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/Ajax_(programming)" target="_blank"
+          onclick="alert ('You are going to AJAX info site')">
+          <img
+            src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562631/paginas-web_0009_ajax-logo.png"
+            height="200" width="300">
+        </a>
+        <h2>AUG 6, 2005<br>LANZAMIENTO DE AJAX</h2>
+        <p>Un framework para aplicaciones web que ayuda a desarrollar aplicaciones basadas en AJAX, una tecnología
+          para
+          construir páginas web dinámicas del lado del cliente.
+        </p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <a href="https://www.microsoft.com/silverlight/" target="_blank"
+          onclick="alert ('You are going to SilverLight info site')">
+          <img
+            src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562648/Microsoft_Silverlight_logo.png"
+            height="200" width="300">
+        </a>
+        <h2>SEP 7, 2007<br>LANZAMIENTO DE MICROSOFT SILVERLIGHT</h2>
+        <p>Una estructura para aplicaciones web que agrega nuevas funciones multimedia como la reproducción de vídeos,
+          gráficos vectoriales, animaciones e interactividad, en forma similar a lo que hace Adobe Flash.
+        </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/Adobe_Flash" target="_blank"
+          onclick="alert ('You are going to FLASH 10 info site')">
+          <img
+            src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562600/a76fbc869bdac26eebd74a04df44c1d1090bdbb2.jpg"
+            height="200" width="300">
+        </a>
+        <h2>JUN 23, 2010<br>LANZAMIENTO DE FLASH 10</h2>
+        <p>Versión 10.1.53.64: junio de 2010.
+        </p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank"
+          onclick="alert ('You are going to CSS3 info site')">
+          <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562566/descarga_%286%29.jpeg"
+            height="200" width="300">
+        </a>
+        <h2>DEC 12, 2011<br>LANZAMIENTO DE CSS3</h2>
+        <p>CSS3 es la última evolución del lenguaje de las Hojas de Estilo en Cascada (Cascading Style Sheets).
+        </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank"
+          onclick="alert ('You are going to HTML info site')">
+          <img
+            src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9562564/HTML5_logo_and_wordmark.svg.png"
+            height="200" width="300">
+        </a>
+        <h2>OCT 12, 2014<br>LANZAMIENTO DE HTML5</h2>
+        <p>Es la quinta revisión importante del lenguaje básico de la World Wide Web, HTML. HTML5 especifica dos
+          variantes de sintaxis para HTML: una «clásica», HTML (text/html), conocida como HTML5, y una variante XHTML
+          conocida como sintaxis XHTML5 que deberá servirse con sintaxis XML (application/xhtml+xml).
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
