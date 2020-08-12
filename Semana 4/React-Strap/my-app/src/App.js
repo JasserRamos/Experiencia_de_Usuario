@@ -34,7 +34,7 @@ const Example = (props) => {
       <h1>
         Video con React
       </h1>
-      <Button color="primary" onclick="window.open('http://www.google.com')" >primary</Button>{' '}
+      <Button color="primary" href="https://google.com" >primary</Button>{' '}
       <Player
         playsInline
         poster="/assets/poster.png"
